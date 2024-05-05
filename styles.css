@@ -1,0 +1,325 @@
+:root {
+    --clr-silver: #87879D;
+    --clr-silver-semiopa: rgba(134, 134, 156, 0.25);
+    --clr-darkblue: #28283D;
+    --clr-white: #FFFFFF;
+    --clr-slightwhite: #FAFAFA;
+    --clr-darkteal: rgb(77, 150, 169);
+    --clr-teal: #71c0d4;
+    --clr-lightteal: #8FE3F9;
+    --clr-darkpurple: #855FB1;
+    --clr-purple: #B18BDD;
+    --clr-lightpurple: #D9B8FF;
+
+    --font-redHat: "Red Hat Display";
+
+    --font-size16px: 1.6rem;
+    --font-size18px: 1.8rem;
+    --font-size26px: 2.6rem;
+    --font-size32px: 3.2rem;
+    --font-size36px: 3.6rem;
+    --font-size40px: 4rem;
+    --font-size44px: 4.4rem;
+    --font-size48px: 4.8rem;
+    --font-size64px: 6.4rem;
+
+    --font-bold: 900;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--clr-slightwhite);
+}
+
+header > img {
+    display: flex;
+    margin: 48px auto;
+}
+
+.desktop-image {
+    display: none;
+}
+
+.header-content-wrapper {
+    margin: 0 auto;
+}
+
+.title-wrapper > img:first-of-type {
+    width: 100%;
+}
+
+h1 {
+    max-width: 280px;
+    margin: 24px auto 16px auto;
+    font-family: var(--font-redHat);
+    font-weight: var(--font-bold);
+    font-size: max(var(--font-size40px), 4.44vw);
+    color: var(--clr-darkblue);
+    text-align: center;
+}
+
+.header-content-wrapper > p {
+    width: max(320px, calc(35% + 9rem));
+    margin: 24px auto;
+    font-family: var(--font-redHat);
+    font-size: max(var(--font-size16px), 1.25vw);
+    color: var(--clr-silver);
+    text-align: center;
+}
+
+/* Styling for all Button */
+
+.title-button-wrapper button {
+    display: block;
+    margin: 8px auto;
+}
+
+button {
+    height: fit-content;
+    padding: 1em 2em;
+    font-family: var(--font-redHat);
+    font-weight: var(--font-bold);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 30px;
+}
+
+.title-button-wrapper > button:first-of-type{
+    background-color: var(--clr-darkteal);
+}
+
+.title-button-wrapper > button:first-of-type:hover {
+    background-color: var(--clr-teal);
+    cursor: pointer;
+}
+
+button:not(.title-button-wrapper > button:first-of-type) {
+    background-color: var(--clr-darkpurple);
+}
+
+button:not(.title-button-wrapper > button:first-of-type):hover {
+    background-color: #B18BDD;
+    cursor: pointer;
+}
+
+.title-button-wrapper > button > span {
+    color: var(--clr-lightteal);
+}
+
+footer > button > span {
+    color: var(--clr-lightpurple);
+}
+
+/* Styling for Button - End Here */
+
+/* Numbering Guide Styling */
+
+.number-guide {
+    margin-top: 60px;
+}
+
+hr {
+    height: 64px;
+    width: 0;
+    border: 1px solid var(--clr-silver-semiopa);
+}
+
+.number-guide > p {
+    height: 56px;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -5px auto 0 auto;
+    border-radius: 50%;
+    border: 2px solid var(--clr-silver-semiopa);
+    background-color: var(--clr-slightwhite);
+    font-family: var(--font-redHat);
+    font-size: var(--font-size16px);
+    font-weight: var(--font-bold);
+    color: var(--clr-silver);
+}
+
+/* Numbering Guide Styling - End Here */
+
+/* Content - Start Here */
+
+.mid-content-wrapper {
+    margin-top: 60px;
+}
+
+picture {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 145px);
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+picture > img {
+    height: 145px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: var(--font-redHat);
+    font-weight: var(--font-bold);
+    font-size: var(--font-size16px);
+    color: var(--clr-darkteal);
+    margin-top: 64px;
+    text-align: center;
+}
+
+h3 {
+    width: min(80%, 360px);
+    font-family: var(--font-redHat);
+    font-weight: var(--font-bold);
+    font-size: var(--font-size32px);
+    color: var(--clr-darkblue);
+    margin: 24px auto 0 auto;
+    text-align: center;
+}
+
+.mid-content-wrapper > p {
+    width: min(85%, 550px);
+    font-family: var(--font-redHat);
+    font-size: var(--font-size16px);
+    color: var(--clr-silver);
+    margin: 32px auto 0 auto;
+    text-align: center;
+}
+
+/* Content - End Here */
+
+/* Footer - Start Here */
+
+footer {
+    position: absolute;
+    transform: translateY(-30px);
+    width: 100%;
+    height: 100vw;
+    background-image: linear-gradient(
+        rgba(77, 150, 169, 0.85),
+        rgba(77, 150, 169, 0.85)), 
+    url(assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto 24px auto;
+    width: max(50%, 290px);
+    font-family: var(--font-redHat);
+    font-size: max(var(--font-size32px), 2.777vw);
+    color: var(--clr-white);
+    text-align: center;
+}
+
+footer > p {
+    display: flex;
+    margin: 0 auto 24px auto;
+    width: max(75%, 320px);
+    font-family: var(--font-redHat);
+    font-size: var(--font-size18px);
+    color: var(--clr-slightwhite);
+    text-align: center;
+    justify-content: center;
+}
+
+footer > button {
+    display: flex;
+    margin: 6px auto 0 auto;
+    white-space: pre;
+}
+
+@media (min-width: 391px) {
+    h1 {
+        max-width: calc(280px + 4.5vw);
+        /* max-width: calc(209px + 10%) ; */
+    }
+
+    .title-button-wrapper {
+        width: fit-content;
+        display: flex;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+    footer {
+        width: 100%;
+        height: max-content;
+        background-image: linear-gradient(
+            rgba(77, 150, 169, 0.85),
+            rgba(77, 150, 169, 0.85)), 
+        url(assets/tablet/image-footer.jpg);
+        padding-bottom: 50px;
+    }
+
+    footer > button {
+        margin: 12px auto 0 auto;
+    }
+}
+
+@media (min-width: 1250px) {
+    .title-wrapper > img:first-of-type {
+        display: none;
+    }
+
+    .desktop-image {
+        display: flex;
+        object-fit: contain;
+    }
+
+    .title-wrapper {
+        display: flex;
+    }
+
+    h1 {
+        max-width: calc(300px + 9vw);
+    }
+
+    .header-content-wrapper > p {
+        width: 80%;
+    }
+
+    picture {
+        max-width: 900px;
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
+
+    picture > img {
+        height: 200px;
+    }
+
+    footer {
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(77, 150, 169, 0.85),
+            rgba(77, 150, 169, 0.85)), 
+        url(assets/desktop/image-footer.jpg);
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    h4 {
+        width: 80%;
+    }
+
+    h4, footer > p, footer > button {
+        text-align: start;
+        margin: 80px auto 0 auto;
+    }
+}
